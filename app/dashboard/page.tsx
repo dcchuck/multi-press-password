@@ -1,6 +1,5 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { LogoutButton } from "./logout-button";
 
 export default async function Dashboard() {
   const cookieStore = await cookies();
@@ -39,7 +38,20 @@ export default async function Dashboard() {
           The whole crew came through.
         </p>
 
-        <LogoutButton />
+        <div className="max-w-lg text-left text-white text-base leading-relaxed mt-4">
+          <p className="mb-4">Crew,</p>
+          <p className="mb-4">
+            I knew you could work together to make it happen. You&apos;re probably a better crew than Andretti had back in &apos;69 when he was the last one to achieve what we were after.
+          </p>
+          <p className="mb-4">
+            One more lock to keep the coppers off our track. Of those famous 5 we admire the one who was closest to perfect. Shame Mario wasn&apos;t car 5.
+          </p>
+          <p className="mb-4">
+            The year of the winner we admire most will get you the plug. Stash it if you can. We need to reverse engineer this thing.
+          </p>
+          <p className="mb-4">Your Leader,</p>
+          <p>Driver Eight</p>
+        </div>
       </div>
 
       {/* Checkered border bottom */}
