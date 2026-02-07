@@ -1,0 +1,27 @@
+# fly.toml app configuration file generated for driver-eight on 2026-02-06T19:34:45-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'driver-eight'
+primary_region = 'arn'
+
+[build]
+
+[env]
+  HOSTNAME = '0.0.0.0'
+  PORT = '3000'
+  PRESS_THRESHOLD = '2'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 512
