@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { setPressed, removePressed, getActiveCount } from "@/lib/state";
+import { setPressed, removePressed, getActiveCount, isThresholdMet } from "@/lib/state";
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -11,5 +11,5 @@ export async function POST(request: Request) {
     removePressed(userId);
   }
 
-  return NextResponse.json({ activeCount: getActiveCount() });
+  return NextResponse.json({ activeCount: getActiveCount(), thresholdMet: isThresholdMet() });
 }
