@@ -51,7 +51,7 @@ export default async function Dashboard() {
           </p>
           <p className="mb-4">Your Leader,</p>
           <p>Driver Eight</p>
-          <p className="mt-4 italic text-neutral-400">PS - it&apos;s the first 3 numbers</p>
+          <p className="mt-4 italic text-neutral-400">PS - it&apos;s the last 3 numbers</p>
         </div>
       </div>
 
