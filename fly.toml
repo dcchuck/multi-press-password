@@ -11,7 +11,7 @@ primary_region = 'arn'
 [env]
   HOSTNAME = '0.0.0.0'
   PORT = '3000'
-  PRESS_THRESHOLD = '4'
+  PRESS_THRESHOLD = '2'
 
 [http_service]
   internal_port = 3000
